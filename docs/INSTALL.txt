@@ -1,0 +1,17 @@
+wta.member_caching Installation
+-------------------------------
+
+To install wta.member_caching using zc.buildout and the plone.recipe.zope2instance
+recipe to manage your project, you can do this:
+
+* Add ``wta.member_caching`` to the list of eggs to install, e.g.:
+
+    [buildout]
+    ...
+    eggs =
+        ...
+        wta.member_caching
+       
+* Re-run buildout, e.g. with:
+
+    $ ./bin/buildout

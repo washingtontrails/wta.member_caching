@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="wta.member_caching">
+
+  <include package=".browser" />
+
+  <i18n:registerTranslations directory="locales" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Member caching tools"
+      directory="profiles/default"
+      description="Extension profile for Tools to allow more aggressive caching of member pages"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <cmf:registerDirectory name="wta_member_caching"/>
+
+</configure>
