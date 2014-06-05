@@ -17,6 +17,7 @@ mt.logoutUser(request)
 
 # eliminate staff & ac cookies
 request.response.expireCookie('__ac')
+request.response.expireCookie('__auth')
 request.response.expireCookie('__staff')
 
 from Products.CMFPlone.utils import transaction_note

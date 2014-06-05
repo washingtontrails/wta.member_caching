@@ -10,7 +10,7 @@
     	<property name="url_expr">string:${globals_view/navigationRootUrl}/logout</property>
     	<property name="link_target"></property>
     	<property name="icon_expr"></property>
-    	<property name="available_expr">python:not (request.get('HTTP_X_ANONYMOUS', False) or (member is not None))</property>
+    	<property name="available_expr"></property>
     	<property name="permissions">
     		<element value="View"/>
     	</property>
@@ -23,7 +23,7 @@
     	<property name="url_expr">string:${globals_view/navigationRootUrl}/login</property>
     	<property name="link_target"></property>
     	<property name="icon_expr"></property>
-    	<property name="available_expr">python:request.get('HTTP_X_ANONYMOUS', False) or (member is not None)</property>
+    	<property name="available_expr"></property>
     	<property name="permissions">
     		<element value="View"/>
     	</property>
@@ -36,7 +36,7 @@
     	<property name="url_expr">string:${globals_view/navigationRootUrl}/@@register</property>
     	<property name="link_target"></property>
     	<property name="icon_expr"></property>
-    	<property name="available_expr">python:request.get('HTTP_X_ANONYMOUS', False) or (member is not None)</property>
+    	<property name="available_expr"></property>
     	<property name="permissions">
     		<element value="Add portal member"/>
     	</property>
@@ -49,7 +49,7 @@
      <property name="url_expr">string:${globals_view/navigationRootUrl}/@@personal-information</property>
      <property name="link_target"></property>
      <property name="icon_expr"></property>
-     <property name="available_expr">python:not (request.get('HTTP_X_ANONYMOUS', False) or (member is not None))</property>
+     <property name="available_expr"></property>
      <property name="permissions">
       <element value="View"/>
      </property>

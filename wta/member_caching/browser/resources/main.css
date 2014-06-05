@@ -1,2 +1,6 @@
 /* Stylesheet for the 'IMemberCachingLayer' Plone browser layer */
 
+#personaltools-preferences,
+#personaltools-logout {
+    display: none !important;
+}

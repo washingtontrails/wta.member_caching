@@ -2,11 +2,14 @@ Introduction
 ============
 
 On login, set a cookie "__staff" if the user is a member of any group beyond Authenticated.
-Clear on logout.
+Cleared on logout.
 
-Make several user actions sensitive to presence or absence of request.HTTP_X_ANONYMOUS.
+On login, set a cookie "__auth".
+Cleared on logout.
 
-For this scheme to work, proxy must set HTTP_X_ANONYMOUS when appropriate.
-Proxy may then strip __ac cookie under carefully configured circumstances when __staff is missing.
+Render login, logout, register, preferences actions always.
+Hide logout and preferences via css.
+Swap login/logout and register/preferences if __auth cookie is present.
 
-This package currently has some unnecessary code to support js and css resources if needed later.
+Now, if we have an __ac cookie, but not a __staff cookie, we can strip the __ac cookie in the proxy.
+Caching proxy must be configured to not strip for posts or sensitive paths.

@@ -44,5 +44,6 @@ id = membership_tool.getAuthenticatedMember().getId()
 groups_tool = context.portal_groups
 if len(groups_tool.getGroupsByUserId(id)) > 1:
     REQUEST.response.setCookie('__staff', '1')
+REQUEST.response.setCookie('__auth', '1')
 
 return state
