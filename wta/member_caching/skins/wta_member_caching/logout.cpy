@@ -15,7 +15,8 @@ request = context.REQUEST
 mt = getToolByName(context, 'portal_membership')
 mt.logoutUser(request)
 
-# eliminate staff cookie
+# eliminate staff & ac cookies
+request.response.expireCookie('__ac')
 request.response.expireCookie('__staff')
 
 from Products.CMFPlone.utils import transaction_note
